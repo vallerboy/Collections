@@ -37,6 +37,43 @@ public class ColleApp {
         }
         System.out.println(set2);
 
+        Deque<String> queue = new ArrayDeque<>();
+
+        queue.add("Oskar");// pierwszy
+        queue.add("Adam");
+        queue.add("Tomek");
+        queue.add("Dorota"); // ostatni
+        // FIFO - first in first out
+        // LIFO - last in first out
+
+        System.out.println(queue.removeLast());
+        System.out.println(queue.removeLast());
+
+
+        Map<String, Integer> ages = new HashMap<>();
+        ages.put("dog", 5);
+        ages.put("cat", 3);
+        ages.put("person", 28);
+
+
+        //loop po wszystkim
+        for (Map.Entry<String, Integer> stringIntegerEntry : ages.entrySet()) {
+            System.out.println(stringIntegerEntry.getKey());
+            System.out.println(stringIntegerEntry.getValue());
+        }
+
+        // loop po kluczach
+        for (String s : ages.keySet()) {
+            System.out.println(s);
+           // System.out.println(ages.get(s));
+        }
+
+        //loop po wartosciach
+        for (Integer integer : ages.values()) {
+            System.out.println(integer);
+        }
+        System.out.println(ages.get("dog"));
+
     }
 
 
